@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>提交我的伤害</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form {
+            width: 300px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .submit-btn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form">
+        <h1>提交我的伤害</h1>
+        <br>
+        <form method="POST" action="/api">
+            <label for="user_id">您的UID:</label>
+            <input type="number" name="user_id" required>
+            <button class="submit-btn" type="submit">提交</button>
+        </form>
+        <br>
+        <h5>提交注意事项<br>1.需要保证玩家在线 2.请准确无误的输入您的9位UID 若出现错误异常 请联系啊这.进行修改</h5>
+    </div>
+</div>
+</body>
+</html>

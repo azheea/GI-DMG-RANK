@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <title>天理核爆排名</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            margin: 0px auto;
+            border-collapse: collapse;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            margin: 0px auto;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tbody tr:hover {
+            background-color: #f9f9f9;
+        }
+        form {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 250px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+        }
+        .submit-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        @media screen and (max-width: 768px) {
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 10px;
+            }
+            .submit-link a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>天理核爆排名</h1>
+<div class="submit-link">
+    <a href="/submit">想参加? 提交我的伤害</a>
+</div>  
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>排名</th>
+        <th>UID</th>
+        <th>伤害</th>
+        <th>角色</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        <td>{{ row['rank'] }}</td>
+        <td>{{ row['user_id'] }}</td>
+        <td>{{ row['damage_num'] }}</td>
+        <td>{{ row['avatar'] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div style="text-align: center;">
+    <h5><i>请注意，此排名仅显示前50名</i></h5>
+</div>
+<h6 style="text-align: center;">❤来自<a href="https://vme50.azhegod.top">啊这.</a></h6>
+</body>
+</html>
